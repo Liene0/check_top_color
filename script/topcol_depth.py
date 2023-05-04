@@ -35,6 +35,12 @@ def image_callback(img_msg):
         aim = cv_image[150:250,int((w/2)-wsize):int((w/2)+wsize)]
     
     hsv = cv2.cvtColor(aim, cv2.COLOR_BGR2HSV)
+    
+    # #get color from rosparam
+    # lower_red = rospy.get_param("lowerRed")
+    # upper_red = rospy.get_param("upperRed")
+    # lower_blue = rospy.get_param("lowerBlue")
+    # upper_blue = rospy.get_param("upperBlue")
 
     #set color
     lower_red = np.array([0,0,70]) #[160,20,70]
